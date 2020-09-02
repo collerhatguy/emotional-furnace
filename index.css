@@ -1,0 +1,65 @@
+:root {
+  --max-font: 3.8vw;
+  --prime-color: blue;
+  --secondary-color: white;
+}
+* {
+  text-align: center;
+}
+header {
+  color: var(--prime-color);
+  background-color: var(--secondary-color);
+  font-size: var(--max-font);
+  display: flex;
+  text-align: center;
+  align-items: space-around;
+  justify-content: center;
+  flex-direction: column;
+}
+main {
+  background-color: var(--prime-color);
+  color: var(--secondary-color);
+  font-size: var(--max-font);
+  position: relative;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main,
+header {
+  height: 100vh;
+}
+textarea {
+  width: calc(100vw / 1.618);
+  height: calc(100vh / 1.618);
+  font-size: calc(var(--max-font) / 1.618);
+  padding: 10px;
+}
+button {
+  width: calc(100vw / (1.618 * 3));
+  height: calc(100vh / (1.618 * 5));
+  font-size: calc(var(--max-font) / (1.618));
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  margin-left: calc((100vw / (1.618 * -6)));
+}
+.burning {
+  animation: Burning 5s ease-in-out forwards;
+}
+@keyframes Burning {
+  0% {
+    width: calc(100vw / 1.618);
+    height: calc(100vh / 1.618);
+  }
+  50% {
+    width: 0px;
+    height: 0px;
+  }
+  100% {
+    width: calc(100vw / 1.618);
+    height: calc(100vh / 1.618);
+  }
+}
