@@ -46,7 +46,7 @@ button {
   margin-left: calc((100vw / (1.618 * -6)));
 }
 .burning {
-  animation: Burning 5s ease-in-out forwards;
+  animation: Burning 3s cubic-bezier(0, 0.4, 0.58, 1) forwards;
 }
 @keyframes Burning {
   0% {
